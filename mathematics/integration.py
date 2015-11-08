@@ -1,10 +1,24 @@
 # -*- coding: utf-8 -*-
+"""Various integration methods."""
 
-import math
 
-def simpsons_rule(function, a, b, n):
+def simpsons_rule(function, a, b):
     """Numerically integrate a function between a and b,
-    using n subintervals, by Simpson's rule.
+    by Simpson's rule.
+
+    Arguments:
+        function (lambda) -- the function to integrate over
+        a        (float)  -- where to start integrating
+        b        (float)  -- where to stop integrating
+    """
+
+    return ((b - a)/6.0) * \
+        (function(a) + 4 * function((a + b)/2.0) + function(b))
+
+
+def composite_simpsons_rule(function, a, b, n):
+    """Numerically integrate a function between a and b,
+    using n subintervals, by the composite Simpson's rule.
 
     Note:
         n has to be even.
@@ -16,12 +30,26 @@ def simpsons_rule(function, a, b, n):
         n        (int)    -- subintervals
     """
 
-    return ((b - a)/6.0) * (function(a) + 4 * function((a + b)/2.0) + function(b))
+    h = (b - a) / n
+    s = function(a) + function(b)
+
+    for j in range(1, n//2):
+        s += 2 * function(2 * (a + j * h))
+
+    for j in range(1, n//2 + 1):
+        s += 4 * function(2 * (a + j * h) - h)
+
+    return (h/3.0) * s
 
 
 def main():
-    print("Simpson's rule: ")
-    print(simpsons_rule(lambda x:x**2, 0.0, 2.0, 10))
+    """The main function. Used to test the other functions."""
+
+    print("Simpson's rule:")
+    print(simpsons_rule(lambda x: x**2, 0.0, 2.0))
+
+    print("\nComposite Simpson's rule:")
+    print(composite_simpsons_rule(lambda x: x**2, 0.0, 2.0, 100))
 
 
 if __name__ == "__main__":
