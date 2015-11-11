@@ -12,9 +12,12 @@ def derivative(function, x, h):
         function (lambda) -- the function to differentiate
         x        (float)  -- where to differentiate
         h        (float)  -- limit
+
+    Return:
+                 (float)  -- differentiation result
     """
 
-    return (function(x + h) - function(x)) / h
+    return (function(x + h) - function(x))/h
 
 
 def main():

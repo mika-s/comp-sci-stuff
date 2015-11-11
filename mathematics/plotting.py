@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from differentiation import derivative
 
 
-def plot_function(function, a, b, n = 0.1):
+def plot_function(function, a, b, n=0.1):
     """Plot a function between a and b.
 
     Arguments:
@@ -23,7 +23,7 @@ def plot_function(function, a, b, n = 0.1):
     plt.show()
 
 
-def plot_function_and_derivative(function, a, b, h, n = 0.1):
+def plot_function_and_derivative(function, a, b, h, n=0.1):
     """Plot a function and its derivative between a and b.
 
     Arguments:
