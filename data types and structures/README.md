@@ -21,3 +21,20 @@ way values of that type can be stored.
 
 
 ## Data structures
+
+### Various data structures
+
+* Linked list: a linked list is a data structure consisting of groups of nodes which together
+represent a sequence. Each node is composed of data and a reference to the next node in the
+sequence. A single linked list only has a reference to the next node; a doubly linked list has
+reference to both the next and the previous node.
+
+* Stack:
+
+* Queue:
+
+* Tree:
+
+* Hash table:
+
+* Heap:
