@@ -6,7 +6,7 @@ class SllNode:
     """Representation of a node in a single linked list."""
 
     def __init__(self, data=None, next=None):
-        """Constructor for Node.
+        """Constructor for SllNode.
 
         Args:
             data    --    the data the node contains

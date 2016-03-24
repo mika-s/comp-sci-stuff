@@ -28,13 +28,12 @@ way values of that type can be stored.
 represent a sequence. Each node is composed of data and a reference to the next node in the
 sequence. A single linked list only has a reference to the next node; a doubly linked list has
 reference to both the next and the previous node.
-
-* Stack:
-
-* Queue:
-
-* Tree:
-
+* Stack: a stack is a last-in-first-out (LIFO) data structure. A stack has two principal operations:
+push and pop. Push adds an element to the stack, while pop removes an element from the stack. The
+last element to be pushed will be removed.
+* Queue: a queue is a first-in-first-out (FIFO) data structure. When a new element is added,
+the first element will be removed.
+* Tree: a tree is a data structure that simulates a hierarchical tree structure. It contains a
+root and one or more subtrees.
 * Hash table:
-
 * Heap:
